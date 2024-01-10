@@ -78,7 +78,7 @@ export async function runEsbuild(
   const deps = await getProductionDeps(process.cwd())
   const external = [
     // Exclude dependencies, e.g. `lodash`, `lodash/get`
-    ...deps.map((dep) => new RegExp(`^${dep}($|\\/|\\\\)`)),
+    // ...deps.map((dep) => new RegExp(`^${dep}($|\\/|\\\\)`)),
     ...(await generateExternal(options.external || [])),
   ]
   const outDir = options.outDir
