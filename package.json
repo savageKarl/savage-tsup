@@ -17,7 +17,7 @@
   "license": "MIT",
   "homepage": "https://tsup.egoist.dev/",
   "repository": {
-    "url": "https://github.com/egoist/tsup.git"
+    "url": "https://github.com/savage181855/savage-tsup"
   },
   "scripts": {
     "dev": "npm run build-fast -- --watch",
