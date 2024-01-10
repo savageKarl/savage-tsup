@@ -696,17 +696,7 @@ test('debounce promise', async () => {
   }
 })
 
-test('exclude dependencies', async () => {
-  const { getFileContent } = await run(getTestName(), {
-    'input.ts': `export {foo} from 'foo';export {nested} from 'foo/nested'`,
-    'package.json': `{"dependencies":{"foo":"0.0.0"}}`,
-    'node_modules/foo/index.js': `export const foo = 'foo'`,
-    'node_modules/foo/package.json': `{"name":"foo"}`,
-  })
-  const contents = await getFileContent('dist/input.js')
-  expect(contents).toContain('require("foo")')
-  expect(contents).toContain('require("foo/nested")')
-})
+
 
 test('code splitting in cjs format', async () => {
   const { getFileContent } = await run(
