@@ -1,6 +1,6 @@
 {
   "name": "savage-tsup",
-  "version": "0.0.0-semantic-release",
+  "version": "0.0.1",
   "description": "Bundle your TypeScript library with no config, powered by esbuild",
   "main": "dist/index.js",
   "bin": {
